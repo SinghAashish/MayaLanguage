@@ -1,87 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{6593C268-4FC8-41A3-B506-FA9ADD5866EF}</ProjectGuid>
+    <TargetFramework>net6.0</TargetFramework>
     <OutputType>Library</OutputType>
-    <AssemblyName>Components</AssemblyName>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
-    <RootNamespace>Components</RootNamespace>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AssemblyTitle>Components</AssemblyTitle>
+    <AssemblyVersion>1.0.*</AssemblyVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
     <OutputPath>bin\Debug</OutputPath>
-    <DefineConstants>DEBUG</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Release</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="Symbols\ISymbol.cs" />
-    <Compile Include="Expression\Rule.cs" />
-    <Compile Include="Expression\Grammer.cs" />
-    <Compile Include="Expression\Set.cs" />
-    <Compile Include="Expression\States.cs" />
-    <Compile Include="Expression\IAction.cs" />
-    <Compile Include="Expression\Stack.cs" />
-    <Compile Include="Inputs\IInput.cs" />
-    <Compile Include="Expression\Shift.cs" />
-    <Compile Include="Expression\Reduce.cs" />
-    <Compile Include="Expression\Accept.cs" />
-    <Compile Include="Expression\Go.cs" />
-    <Compile Include="Symbols\Literal.cs" />
-    <Compile Include="Symbols\Operator.cs" />
-    <Compile Include="Symbols\NonTerminal.cs" />
-    <Compile Include="Symbols\End.cs" />
-    <Compile Include="Symbols\Keyword.cs" />
-    <Compile Include="Symbols\InitialNonTerminal.cs" />
-    <Compile Include="Tree\ITreeNode.cs" />
-    <Compile Include="Tree\LiteralTreeNode.cs" />
-    <Compile Include="Tree\AddTreeNode.cs" />
-    <Compile Include="Tree\MultiplyTreeNode.cs" />
-    <Compile Include="Tree\PrintTreeNode.cs" />
-    <Compile Include="Tree\TreeNodeStack.cs" />
-    <Compile Include="Symbols\Semicolon.cs" />
-    <Compile Include="Tree\ProgramTreeNode.cs" />
-    <Compile Include="Symbols\OpenBracket.cs" />
-    <Compile Include="Symbols\CloseBracket.cs" />
-    <Compile Include="Tree\IfTreeNode.cs" />
-    <Compile Include="Parser\Parser.cs" />
-    <Compile Include="Expression\IGrammerRuleHandler.cs" />
-    <Compile Include="Symbols\Identifier.cs" />
-    <Compile Include="Tree\IdentifierTreeNode.cs" />
-    <Compile Include="Tree\AssignTreeNode.cs" />
-    <Compile Include="Tree\VariableTreeNode.cs" />
-    <Compile Include="Tree\Context.cs" />
-    <Compile Include="Tree\ContextProvider.cs" />
-    <Compile Include="Symbols\Comma.cs" />
-    <Compile Include="Symbols\FunctionIdentifier.cs" />
-    <Compile Include="Tree\FunctionDefinitionTreeNode.cs" />
-    <Compile Include="Tree\FunctionCallTreeNode.cs" />
-    <Compile Include="Tree\ParameterListTreeNode.cs" />
-    <Compile Include="Tree\FunctionTreeNode.cs" />
-    <Compile Include="Tree\ParameterListElementsTreeNode.cs" />
-    <Compile Include="Tree\ParameterValueListTreeNode.cs" />
-    <Compile Include="Tree\ParameterValuesListElementsTreeNode.cs" />
-    <Compile Include="Tree\OperatorTreeNode.cs" />
-  </ItemGroup>
   <ItemGroup>
     <Folder Include="Symbols\" />
     <Folder Include="Expression\" />
@@ -89,5 +23,4 @@
     <Folder Include="Tree\" />
     <Folder Include="Parser\" />
   </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

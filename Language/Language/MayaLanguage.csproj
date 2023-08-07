@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{0DF29454-79A0-417D-B969-A79F8050D785}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AssemblyName>Maya</AssemblyName>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <RootNamespace>Language</RootNamespace>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssemblyTitle>MayaLanguage</AssemblyTitle>
+    <AssemblyVersion>1.0.*</AssemblyVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -27,21 +24,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Main.cs" />
-    <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="Input.cs" />
-    <Compile Include="GrammerBuilder.cs" />
-    <Compile Include="GrammerRuleHandler.cs" />
-  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\Components\Components.csproj">
-      <Project>{6593C268-4FC8-41A3-B506-FA9ADD5866EF}</Project>
-      <Name>Components</Name>
-    </ProjectReference>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="GrammerBuilder.cs" />
+    <Compile Include="GrammerRuleHandler.cs" />
+    <Compile Include="Input.cs" />
+    <Compile Include="Main.cs" />
   </ItemGroup>
 </Project>
