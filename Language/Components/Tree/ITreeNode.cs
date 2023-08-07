@@ -3,8 +3,8 @@ using System;
 
 namespace Components
 {
-	public interface ITreeNode
-	{
-		ISymbol Execute();
-	}
+    public interface ITreeNode
+    {
+        ISymbol Execute();
+    }
 }

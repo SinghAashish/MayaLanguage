@@ -3,14 +3,15 @@ using System;
 
 namespace Components
 {
-	public class Accept:IAction
-	{
-		public Accept()
-		{
-		}
-		
-		public void Do(IInput input, Stack stack, IGrammerRuleHandler ruleHandler){
+    public class Accept : IAction
+    {
+        public Accept()
+        {
+        }
 
-		}		
-	}
+        public void Do(IInput input, Stack stack, IGrammerRuleHandler ruleHandler)
+        {
+
+        }
+    }
 }
