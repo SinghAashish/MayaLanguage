@@ -17,6 +17,9 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Components.pidb" />
+  </ItemGroup>
+  <ItemGroup>
     <Folder Include="Symbols\" />
     <Folder Include="Expression\" />
     <Folder Include="Inputs\" />

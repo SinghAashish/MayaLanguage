@@ -476,4 +476,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 /Language/Components/bin/Debug/Components.dll
-/Language/Components/bin/Debug/Components.dll
+/Language/Components/Components.pidb
