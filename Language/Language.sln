@@ -4,7 +4,7 @@ VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Components", "Components\Components.csproj", "{12788937-1DA2-41A0-A073-78D8FD426F71}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Language", "Language\Language.csproj", "{D55E8485-0570-417B-8070-3BA706E9BEB8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MayaLanguage", "Language\MayaLanguage.csproj", "{D55E8485-0570-417B-8070-3BA706E9BEB8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
