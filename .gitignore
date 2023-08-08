@@ -477,3 +477,4 @@ $RECYCLE.BIN/
 *.lnk
 /Language/Components/bin/Debug/Components.dll
 /Language/Components/Components.pidb
+/Language/Components/bin/Debug/Components.dll.mdb

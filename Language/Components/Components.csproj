@@ -1,9 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-	<ImplicitUsings>enable</ImplicitUsings>
-	<Nullable>enable</Nullable>
-    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+	<TargetFramework>$(TargetFrameworkVersion)</TargetFramework>
+	<ImplicitUsings>$(ImplicitUsingsEnable)</ImplicitUsings>
+	<Nullable>$(NullableEnable)</Nullable>
+    <RestorePackagesWithLockFile>$(RestorePackagesWithLockFileTrue)</RestorePackagesWithLockFile>
 	<OutputType>Library</OutputType>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyTitle>Components</AssemblyTitle>
