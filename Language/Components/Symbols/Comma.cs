@@ -1,48 +1,47 @@
 
 using System;
 
-namespace Components
+namespace Components;
+
+public class Comma : ISymbol
 {
-    public class Comma : ISymbol
+    public Comma()
     {
-        public Comma()
-        {
-        }
+    }
 
-        public ISymbol Duplicate()
-        {
-            return new Comma();
-        }
+    public ISymbol Duplicate()
+    {
+        return new Comma();
+    }
 
-        public override bool Equals(object obj)
-        {
-            Comma objectSymbol = obj as Comma;
-            return objectSymbol != null;
-        }
+    public override bool Equals(object obj)
+    {
+        Comma objectSymbol = obj as Comma;
+        return objectSymbol != null;
+    }
 
-        public override int GetHashCode()
-        {
-            return this.GetType().ToString().GetHashCode();
-        }
+    public override int GetHashCode()
+    {
+        return this.GetType().ToString().GetHashCode();
+    }
 
-        public object Value()
-        {
-            return null;
-        }
+    public object Value()
+    {
+        return null;
+    }
 
-        public bool IsEndSymbol()
-        {
-            return false;
-        }
+    public bool IsEndSymbol()
+    {
+        return false;
+    }
 
-        public bool IsNonTerminal()
-        {
-            return false;
-        }
+    public bool IsNonTerminal()
+    {
+        return false;
+    }
 
-        public override string ToString()
-        {
-            return ",";
-        }
+    public override string ToString()
+    {
+        return ",";
     }
 }

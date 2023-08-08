@@ -1,20 +1,19 @@
 
 using System;
 
-namespace Components
+namespace Components;
+
+public class OperatorTreeNode : ITreeNode
 {
-    public class OperatorTreeNode : ITreeNode
+    private Operator operatorSymbol;
+
+    public OperatorTreeNode(Operator operatorSymbol)
     {
-        private Operator operatorSymbol;
+        this.operatorSymbol = operatorSymbol;
+    }
 
-        public OperatorTreeNode(Operator operatorSymbol)
-        {
-            this.operatorSymbol = operatorSymbol;
-        }
-
-        public ISymbol Execute()
-        {
-            return operatorSymbol;
-        }
+    public ISymbol Execute()
+    {
+        return operatorSymbol;
     }
 }

@@ -1,24 +1,23 @@
 
 using System;
 
-namespace Components
+namespace Components;
+
+
+public class ParameterValueListTreeNode : ITreeNode
 {
+    private ITreeNode parameterValueListElements;
 
-    public class ParameterValueListTreeNode : ITreeNode
+    public ParameterValueListTreeNode(ITreeNode parameterValueListElements)
     {
-        private ITreeNode parameterValueListElements;
-
-        public ParameterValueListTreeNode(ITreeNode parameterValueListElements)
-        {
-            this.parameterValueListElements = parameterValueListElements;
-        }
-
-        public ISymbol Execute()
-        {
-            if (parameterValueListElements == null)
-                return null;
-            return parameterValueListElements.Execute();
-        }
-
+        this.parameterValueListElements = parameterValueListElements;
     }
+
+    public ISymbol Execute()
+    {
+        if (parameterValueListElements == null)
+            return null;
+        return parameterValueListElements.Execute();
+    }
+
 }

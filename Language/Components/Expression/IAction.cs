@@ -1,10 +1,9 @@
 
 using System;
 
-namespace Components
+namespace Components;
+
+public interface IAction
 {
-    public interface IAction
-    {
-        void Do(IInput input, Stack stack, IGrammerRuleHandler ruleHandler);
-    }
+    void Do(IInput input, Stack stack, IGrammerRuleHandler ruleHandler);
 }

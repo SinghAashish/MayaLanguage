@@ -1,18 +1,17 @@
 
 using System;
 
-namespace Components
+namespace Components;
+
+public class InitialNonTerminal : NonTerminal
 {
-    public class InitialNonTerminal : NonTerminal
+    public InitialNonTerminal(string symbol) : base(symbol)
     {
-        public InitialNonTerminal(string symbol) : base(symbol)
-        {
-        }
-
-        public override string ToString()
-        {
-            return base.ToString() + "_";
-        }
-
     }
+
+    public override string ToString()
+    {
+        return base.ToString() + "_";
+    }
+
 }

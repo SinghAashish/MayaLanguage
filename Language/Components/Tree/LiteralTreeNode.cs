@@ -1,21 +1,20 @@
 
 using System;
 
-namespace Components
+namespace Components;
+
+public class LiteralTreeNode : ITreeNode
 {
-    public class LiteralTreeNode : ITreeNode
+    private Literal literal;
+
+    public LiteralTreeNode(ISymbol literal)
     {
-        private Literal literal;
-
-        public LiteralTreeNode(ISymbol literal)
-        {
-            this.literal = literal as Literal;
-        }
-
-        public ISymbol Execute()
-        {
-            return this.literal;
-        }
-
+        this.literal = literal as Literal;
     }
+
+    public ISymbol Execute()
+    {
+        return this.literal;
+    }
+
 }

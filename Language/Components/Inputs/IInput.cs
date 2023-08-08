@@ -1,13 +1,12 @@
 
 using System;
 
-namespace Components
+namespace Components;
+
+public interface IInput
 {
-    public interface IInput
-    {
-        ISymbol Get();
-        void Next();
-        ISymbol LastReadElement { get; set; }
-        void Parse();
-    }
+    ISymbol Get();
+    void Next();
+    ISymbol LastReadElement { get; set; }
+    void Parse();
 }

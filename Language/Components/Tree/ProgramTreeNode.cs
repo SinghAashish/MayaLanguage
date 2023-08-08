@@ -2,42 +2,41 @@
 using System;
 using System.Collections;
 
-namespace Components
+namespace Components;
+
+public class ProgramTreeNode : ITreeNode
 {
-    public class ProgramTreeNode : ITreeNode
+    private ArrayList expressions;
+
+    public ProgramTreeNode(ITreeNode firstExpression, ITreeNode followingExpression)
     {
-        private ArrayList expressions;
+        expressions = new ArrayList();
+        AddExpression(firstExpression);
+        AddExpression(followingExpression);
+    }
 
-        public ProgramTreeNode(ITreeNode firstExpression, ITreeNode followingExpression)
-        {
-            expressions = new ArrayList();
-            AddExpression(firstExpression);
-            AddExpression(followingExpression);
-        }
+    public ProgramTreeNode(ITreeNode expression)
+    {
+        expressions = new ArrayList();
+        AddExpression(expression);
+    }
 
-        public ProgramTreeNode(ITreeNode expression)
-        {
-            expressions = new ArrayList();
-            AddExpression(expression);
-        }
+    public void AddExpression(ITreeNode expression)
+    {
+        expressions.Add(expression);
+    }
 
-        public void AddExpression(ITreeNode expression)
+    public ISymbol Execute()
+    {
+        ISymbol lastSymbol = null;
+        for (int index = 0; index < expressions.Count; index++)
         {
-            expressions.Add(expression);
+            object obj = expressions[index];
+            ITreeNode expression = obj as ITreeNode;
+            if (expression == null)
+                continue;
+            lastSymbol = expression.Execute();
         }
-
-        public ISymbol Execute()
-        {
-            ISymbol lastSymbol = null;
-            for (int index = 0; index < expressions.Count; index++)
-            {
-                object obj = expressions[index];
-                ITreeNode expression = obj as ITreeNode;
-                if (expression == null)
-                    continue;
-                lastSymbol = expression.Execute();
-            }
-            return lastSymbol;
-        }
+        return lastSymbol;
     }
 }

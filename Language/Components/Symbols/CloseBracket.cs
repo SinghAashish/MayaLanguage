@@ -1,48 +1,47 @@
 
 using System;
 
-namespace Components
+namespace Components;
+
+public class CloseBracket : ISymbol
 {
-    public class CloseBracket : ISymbol
+    public CloseBracket()
     {
-        public CloseBracket()
-        {
-        }
+    }
 
-        public ISymbol Duplicate()
-        {
-            return new CloseBracket();
-        }
+    public ISymbol Duplicate()
+    {
+        return new CloseBracket();
+    }
 
-        public override bool Equals(object obj)
-        {
-            CloseBracket objectSymbol = obj as CloseBracket;
-            return objectSymbol != null;
-        }
+    public override bool Equals(object obj)
+    {
+        CloseBracket objectSymbol = obj as CloseBracket;
+        return objectSymbol != null;
+    }
 
-        public override int GetHashCode()
-        {
-            return this.GetType().ToString().GetHashCode();
-        }
+    public override int GetHashCode()
+    {
+        return this.GetType().ToString().GetHashCode();
+    }
 
-        public object Value()
-        {
-            return null;
-        }
+    public object Value()
+    {
+        return null;
+    }
 
-        public bool IsEndSymbol()
-        {
-            return false;
-        }
+    public bool IsEndSymbol()
+    {
+        return false;
+    }
 
-        public bool IsNonTerminal()
-        {
-            return false;
-        }
+    public bool IsNonTerminal()
+    {
+        return false;
+    }
 
-        public override string ToString()
-        {
-            return ")";
-        }
+    public override string ToString()
+    {
+        return ")";
     }
 }

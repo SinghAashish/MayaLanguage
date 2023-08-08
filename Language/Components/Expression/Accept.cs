@@ -1,17 +1,16 @@
 
 using System;
 
-namespace Components
+namespace Components;
+
+public class Accept : IAction
 {
-    public class Accept : IAction
+    public Accept()
     {
-        public Accept()
-        {
-        }
+    }
 
-        public void Do(IInput input, Stack stack, IGrammerRuleHandler ruleHandler)
-        {
+    public void Do(IInput input, Stack stack, IGrammerRuleHandler ruleHandler)
+    {
 
-        }
     }
 }

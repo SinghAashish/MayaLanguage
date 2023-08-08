@@ -1,20 +1,19 @@
 
 using System;
 
-namespace Components
+namespace Components;
+
+public class Go : IAction
 {
-    public class Go : IAction
+    private int stateId;
+
+    public Go(int stateId)
     {
-        private int stateId;
+        this.stateId = stateId;
+    }
 
-        public Go(int stateId)
-        {
-            this.stateId = stateId;
-        }
-
-        public void Do(IInput input, Stack stack, IGrammerRuleHandler ruleHandler)
-        {
-            stack.Push(stateId);
-        }
+    public void Do(IInput input, Stack stack, IGrammerRuleHandler ruleHandler)
+    {
+        stack.Push(stateId);
     }
 }

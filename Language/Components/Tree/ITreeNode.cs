@@ -1,10 +1,9 @@
 
 using System;
 
-namespace Components
+namespace Components;
+
+public interface ITreeNode
 {
-    public interface ITreeNode
-    {
-        ISymbol Execute();
-    }
+    ISymbol Execute();
 }

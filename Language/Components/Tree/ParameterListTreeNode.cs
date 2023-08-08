@@ -1,22 +1,21 @@
 
 using System;
 
-namespace Components
+namespace Components;
+
+public class ParameterListTreeNode : ITreeNode
 {
-    public class ParameterListTreeNode : ITreeNode
+    private ITreeNode parameterListElements;
+
+    public ParameterListTreeNode(ITreeNode parameterListElements)
     {
-        private ITreeNode parameterListElements;
+        this.parameterListElements = parameterListElements;
+    }
 
-        public ParameterListTreeNode(ITreeNode parameterListElements)
-        {
-            this.parameterListElements = parameterListElements;
-        }
-
-        public ISymbol Execute()
-        {
-            if (parameterListElements == null)
-                return null;
-            return parameterListElements.Execute();
-        }
+    public ISymbol Execute()
+    {
+        if (parameterListElements == null)
+            return null;
+        return parameterListElements.Execute();
     }
 }

@@ -1,11 +1,10 @@
 
 using System;
 
-namespace Components
+namespace Components;
+
+public interface IGrammerRuleHandler
 {
-    public interface IGrammerRuleHandler
-    {
-        void HandleRule(int ruleId);
-        TreeNodeStack TreeNodeStack { set; }
-    }
+    void HandleRule(int ruleId);
+    TreeNodeStack TreeNodeStack { set; }
 }

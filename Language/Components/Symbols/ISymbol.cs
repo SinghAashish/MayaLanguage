@@ -1,13 +1,12 @@
 
 using System;
 
-namespace Components
+namespace Components;
+
+public interface ISymbol
 {
-    public interface ISymbol
-    {
-        bool IsNonTerminal();
-        bool IsEndSymbol();
-        object Value();
-        ISymbol Duplicate();
-    }
+    bool IsNonTerminal();
+    bool IsEndSymbol();
+    object Value();
+    ISymbol Duplicate();
 }

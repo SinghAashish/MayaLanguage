@@ -1,21 +1,20 @@
 
 using System;
 
-namespace Components
+namespace Components;
+
+public class Shift : IAction
 {
-    public class Shift : IAction
+    private int stateId;
+
+    public Shift(int stateId)
     {
-        private int stateId;
+        this.stateId = stateId;
+    }
 
-        public Shift(int stateId)
-        {
-            this.stateId = stateId;
-        }
-
-        public void Do(IInput input, Stack stack, IGrammerRuleHandler ruleHandler)
-        {
-            input.Next();
-            stack.Push(stateId);
-        }
+    public void Do(IInput input, Stack stack, IGrammerRuleHandler ruleHandler)
+    {
+        input.Next();
+        stack.Push(stateId);
     }
 }

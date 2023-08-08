@@ -2,30 +2,29 @@
 using System;
 using System.Collections;
 
-namespace Components
+namespace Components;
+
+public class TreeNodeStack
 {
-    public class TreeNodeStack
+    private System.Collections.Stack stack;
+
+    public TreeNodeStack()
     {
-        private System.Collections.Stack stack;
+        stack = new System.Collections.Stack();
+    }
 
-        public TreeNodeStack()
-        {
-            stack = new System.Collections.Stack();
-        }
+    public ITreeNode Top()
+    {
+        return (ITreeNode)stack.Peek();
+    }
 
-        public ITreeNode Top()
-        {
-            return (ITreeNode)stack.Peek();
-        }
+    public void Push(ITreeNode treeNode)
+    {
+        stack.Push(treeNode);
+    }
 
-        public void Push(ITreeNode treeNode)
-        {
-            stack.Push(treeNode);
-        }
-
-        public ITreeNode Pop()
-        {
-            return (ITreeNode)stack.Pop();
-        }
+    public ITreeNode Pop()
+    {
+        return (ITreeNode)stack.Pop();
     }
 }
